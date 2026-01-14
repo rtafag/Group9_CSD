@@ -1,0 +1,153 @@
+giai thich cho toi ve doan code nay
+
+Đây là **hàm `printList()` trong Java**, dùng để **in ra các phần tử của một danh sách liên kết đơn (singly linked list)**. Mình giải thích **từng phần** cho bạn nhé 👇
+
+---
+
+### 📌 Đoạn code
+
+```java
+public void printList() {
+    Node current = head;
+
+    while (current != null) {
+        System.out.print(current.data);
+        if (current.next != null) {
+            System.out.print("->");
+        }
+        current = current.next;
+    }
+
+    System.out.println();
+    if (head == null) {
+        System.out.println("null");
+    }
+}
+```
+
+---
+
+## 🔹 1. Khai báo hàm
+
+```java
+public void printList()
+```
+
+* Đây là **phương thức công khai**
+* Không trả về giá trị (`void`)
+* Dùng để **in danh sách liên kết ra màn hình**
+
+---
+
+## 🔹 2. Tạo con trỏ duyệt danh sách
+
+```java
+Node current = head;
+```
+
+* `head` là **node đầu tiên** của danh sách
+* `current` dùng để **duyệt từng node**, bắt đầu từ `head`
+
+---
+
+## 🔹 3. Vòng lặp duyệt danh sách
+
+```java
+while (current != null) {
+```
+
+* Lặp cho đến khi **chưa tới cuối danh sách**
+* Khi `current == null` → đã duyệt xong
+
+---
+
+## 🔹 4. In dữ liệu của node hiện tại
+
+```java
+System.out.print(current.data);
+```
+
+* In giá trị `data` của node hiện tại
+* Dùng `print` (không xuống dòng)
+
+---
+
+## 🔹 5. In mũi tên `->` nếu chưa phải node cuối
+
+```java
+if (current.next != null) {
+    System.out.print("->");
+}
+```
+
+* Nếu **node sau còn tồn tại**
+* In `"->"` để biểu diễn liên kết
+* Tránh in `->` ở **node cuối**
+
+📌 Ví dụ hiển thị:
+
+```
+1->2->3->4
+```
+
+---
+
+## 🔹 6. Di chuyển sang node tiếp theo
+
+```java
+current = current.next;
+```
+
+* Cập nhật con trỏ để duyệt tiếp
+
+---
+
+## 🔹 7. Xuống dòng sau khi in xong danh sách
+
+```java
+System.out.println();
+```
+
+---
+
+## 🔹 8. Trường hợp danh sách rỗng
+
+```java
+if (head == null) {
+    System.out.println("null");
+}
+```
+
+* Nếu `head == null` → danh sách **không có phần tử**
+* In ra:
+
+```
+null
+```
+
+---
+
+## ✅ Tóm tắt chức năng
+
+* In danh sách liên kết theo dạng:
+
+```
+data1->data2->data3
+```
+
+* Nếu danh sách rỗng:
+
+```
+null
+```
+
+---
+
+Nếu bạn muốn mình:
+
+* 🔧 sửa hàm cho **gọn hơn**
+* 🧠 vẽ **sơ đồ minh họa linked list**
+* 🧪 viết **ví dụ chạy thử với dữ liệu**
+
+👉 cứ nói nhé!
+
